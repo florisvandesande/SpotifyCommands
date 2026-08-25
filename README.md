@@ -5,7 +5,7 @@ This PHP module adds the currently playing Spotify track to a configured playlis
 Example command URL:
 
 ```text
-https://florisvandesande.com/muziek/commands/37i9dQZF1DXcBWIGoYBM5M?key=YOUR_COMMAND_SECRET
+https://example.com/muziek/commands/37i9dQZF1DXcBWIGoYBM5M?key=YOUR_COMMAND_SECRET
 ```
 
 The playlist ID in the URL must belong to a playlist listed in `config.php`. A track that is already present is not added a second time.
@@ -29,7 +29,7 @@ The application does not need Composer, Python, a background process, or an exte
 4. Add this exact Redirect URI:
 
 ```text
-https://florisvandesande.com/muziek/commands/callback
+https://example.com/muziek/commands/callback
 ```
 
 5. Save the Spotify app settings.
@@ -42,7 +42,7 @@ The scheme, domain, path, letter case, and trailing slash must match exactly. Do
 Upload the contents of `web-application/spotify-playlist-commands/` to the server directory that serves:
 
 ```text
-https://florisvandesande.com/muziek/commands/
+https://example.com/muziek/commands/
 ```
 
 Keep the included `.htaccess` files. They provide clean URLs and prevent direct web access to configuration, tokens, logs, tests, and internal PHP files.
@@ -99,7 +99,7 @@ git check-ignore -v web-application/spotify-playlist-commands/config.php
 Open this URL in a browser, replacing the final value with `app.command_secret`:
 
 ```text
-https://florisvandesande.com/muziek/commands/authorize?key=YOUR_COMMAND_SECRET
+https://example.com/muziek/commands/authorize?key=YOUR_COMMAND_SECRET
 ```
 
 Sign in to the Spotify account that owns or collaborates on the playlists and grant permission. Spotify returns to `/callback`; the page confirms that the encrypted tokens were saved in the local SQLite database.
@@ -111,7 +111,7 @@ Spotify refresh tokens currently expire after six months. When a command later r
 Call the protected status route:
 
 ```text
-https://florisvandesande.com/muziek/commands/status?key=YOUR_COMMAND_SECRET
+https://example.com/muziek/commands/status?key=YOUR_COMMAND_SECRET
 ```
 
 Expected response:
@@ -143,7 +143,7 @@ Spotify URL:
 https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M
 
 Command URL:
-https://florisvandesande.com/muziek/commands/37i9dQZF1DXcBWIGoYBM5M?key=YOUR_COMMAND_SECRET
+https://example.com/muziek/commands/37i9dQZF1DXcBWIGoYBM5M?key=YOUR_COMMAND_SECRET
 ```
 
 Successful response:
