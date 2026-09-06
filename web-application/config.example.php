@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 return [
     'app' => [
-        'base_url' => 'https://florisvandesande.com/muziek/commands',
-        'locale' => 'nl',
+        'base_url' => 'https://example.com/spotify-commands',
+        'locale' => 'en',
         // Generate with: php -r "echo bin2hex(random_bytes(32)), PHP_EOL;"
         'command_secret' => 'replace-with-a-random-64-character-secret',
         // Generate with: php -r "echo 'base64:', base64_encode(random_bytes(32)), PHP_EOL;"
@@ -17,11 +17,11 @@ return [
     ],
     'playlists' => [
         [
-            'name' => 'Favorieten',
+            'name' => 'Favorites',
             'url' => 'https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M',
         ],
         [
-            'name' => 'Rustig',
+            'name' => 'Focus',
             'url' => 'https://open.spotify.com/playlist/37i9dQZF1DWZd79rJ6a7lp',
         ],
     ],

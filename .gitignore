@@ -71,6 +71,8 @@ coverage/
 *.sqlite
 data/*.db
 data/statusboard.db
+web-application/data/locks/*
+!web-application/data/locks/.gitkeep
 
 ################################################################################
 # Uploads / user-generated files (meestal niet committen)
@@ -81,6 +83,7 @@ uploads/*
 ################################################################################
 # Overig
 ################################################################################
+/icons/
 Thumbs.db
 agents.md
 CODEREVIEW.md
